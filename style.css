@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Toolbar Styling */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #2f5d8a;
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  gap: 10px;
+  width: 100%;
+  max-width: 850px;
+}
+
+.toolbar button,
+.toolbar input[type="color"],
+.toolbar input[type="number"],
+.toolbar input[type="file"] {
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+  background: #ffffff;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.toolbar button:hover,
+.toolbar input[type="color"]:hover,
+.toolbar input[type="number"]:hover,
+.toolbar input[type="file"]:hover {
+  background: #f0f0f0;
+}
+
+.toolbar button:active {
+  transform: scale(0.95);
+}
+
+/* Canvas Styling */
+canvas {
+  border: 3px solid #2f5d8a;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .toolbar button,
+  .toolbar input {
+    width: 100%;
+    font-size: 16px;
+  }
+}
